@@ -1,0 +1,3 @@
+node_modules
+testing.rest  
+#testing.rest is a file i use to test my routes with the rest extention on vscode
