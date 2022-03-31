@@ -1,6 +1,7 @@
-const adaptedCountryData = require("../data/adapted.json");
-const axios = require("axios").default;
-const fs = require("fs");
+import adaptedCountryData from "../data/adapted.json" assert { type: "json" };
+import fs from "fs";
+
+import axios from "axios";
 
 let subscriptionKey = "7e1c057980a94d1fad8bb0375e9f960e";
 
@@ -42,4 +43,11 @@ let populateLinks = async () => {
   }
   writeIntoFile(adaptedCountryData);
 };
-populateLinks();
+//this line stays commented for safety reason
+// populateLinks();
+
+//assigning id's
+adaptedCountryData.forEach((country, i) => {
+  country.id = i;
+});
+writeIntoFile(adaptedCountryData);
