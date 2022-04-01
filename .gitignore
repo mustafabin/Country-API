@@ -1,3 +1,4 @@
 node_modules
 testing.rest  
+.env
 #testing.rest is a file i use to test my routes with the rest extention on vscode
